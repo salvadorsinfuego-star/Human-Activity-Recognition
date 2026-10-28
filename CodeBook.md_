@@ -1,0 +1,47 @@
+# Code Book: Human Activity Recognition Using Smartphones
+
+## Project Description
+
+This project cleans and summarizes data collected from the accelerometers and gyroscopes of Samsung Galaxy S smartphones.
+
+## Data Source
+
+UCI Human Activity Recognition Using Smartphones dataset.
+
+## Variables
+
+### subject
+Identifies the participant who performed the activity. Values range from 1 to 30. No unit.
+
+### activity
+Describes the physical activity performed:
+- WALKING
+- WALKING_UPSTAIRS
+- WALKING_DOWNSTAIRS
+- SITTING
+- STANDING
+- LAYING
+
+### Measurement Variables
+The remaining 66 columns contain selected mean and standard deviation measurements from the original dataset. These measurements describe body acceleration, gravity, gyroscope signals, signal magnitudes, and frequency-domain measurements.
+
+The measurements are normalized signal values. Units depend on the original measurement and transformation.
+
+## Data Transformations
+
+1. Downloaded and extracted the original dataset.
+2. Read the training and test datasets.
+3. Combined the training and test data.
+4. Selected measurements containing mean() and std().
+5. Replaced activity IDs with descriptive activity names.
+6. Renamed measurement variables for readability.
+7. Added subject and activity information.
+8. Grouped the data by subject and activity.
+9. Calculated the average of each measurement for each group.
+10. Saved the final dataset as tidy_data.txt.
+
+## Final Dataset
+
+The final dataset contains 180 rows and 68 columns.
+
+Each row represents one subject performing one activity. The measurement columns contain the average values for that subject and activity.
